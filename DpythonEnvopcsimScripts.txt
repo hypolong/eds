@@ -1,0 +1,49 @@
+D:\pythonEnv\opcsim\Scripts
+
+
+python D:\dev\opc_simulator_ctc\opcua_simulator.py --interval 0.1 --changemode increase --count 1000 --port 4844
+
+
+sudo bash ./newmonitor.sh 2855 0.5 1000-100ms-1component.log 
+
+
+curl "http://localhost:5590/api/v1/Tenants/default/Namespaces/default/Streams/eds01.OpcUa2.DeviceStatus/data/last" | jq .
+
+
+curl "http://localhost:5590/api/v1/Tenants/default/Namespaces/default/Streams/OpcUaClient032.iQ01.Tag113/data/last" | jq .
+
+curl "http://localhost:5590/api/v1/Tenants/default/Namespaces/default/Streams/OpcUaClient012.iQ01.Tag4999/data/last" | jq .
+
+curl "http://localhost:5590/api/v1/Tenants/default/Namespaces/default/Streams/OpcUaClient012.iQ01.Tag001/data/last" | jq .
+
+
+edgecmd get diagnostics
+
+
+
+CPU
+2 process 6 core 2.0GHz
+
+Memory
+8GB
+
+
+
+5Components
+
+{
+  "timestamp": "2026-11-19T11:48:30.079703Z",
+  "processIdentifier": 2855,
+  "startTime": "2026-11-19T10:55:50.5643559Z",
+  "workingSet": 905.572352,
+  "totalProcessorTime": 1380.5,
+  "totalUserProcessorTime": 1117.57,
+  "totalPrivilegedProcessorTime": 262.93,
+  "threadCount": 34,
+  "handleCount": 10626,
+  "managedMemorySize": 351.99976,
+  "privateMemorySize": 1028.820992,
+  "peakPagedMemorySize": 0,
+  "storageTotalSize": 40895.807488,
+  "storageFreeSpace": 23099.748352
+}
