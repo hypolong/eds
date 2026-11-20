@@ -99,3 +99,7 @@
     "Value": 76076
   }
 ]
+
+
+curl "http://localhost:5590/api/v1/Tenants/default/Namespaces/default/Streams/hypo012.Device1.Tag9000/data?filter=Value%20eq%200" | jq .
+
