@@ -90,7 +90,7 @@
     "Value": 76046
   },
   {
-    "Quality": 1152,
+    "Quality": 1152,   # updated
     "Timestamp": "2026-11-20T04:41:16.585Z",
     "Value": 76074
   },
@@ -101,5 +101,41 @@
 ]
 
 
-curl "http://localhost:5590/api/v1/Tenants/default/Namespaces/default/Streams/hypo012.Device1.Tag9000/data?filter=Value%20eq%200" | jq .
+curl "http://localhost:5590/api/v1/Tenants/default/Namespaces/default/Streams/hypo012.Device1.SIMENS001data?filter=Value%20eq%200" | jq .
+
+
+[
+  {
+    # no Quality field, data is good
+    "Timestamp": "2026-11-20T05:58:42.619Z",
+    "Value": 22253
+  },
+  {
+    "Quality": 1152,
+    "Timestamp": "2026-11-20T05:49:30.71Z",
+    "Value": 21701
+  },
+  {
+    "Quality": 1152,????
+    "Timestamp": "2026-11-20T05:51:56.213Z",
+    "Value": 231421421
+  },
+  {
+    "Quality": 1152, # updated by temp
+    "Timestamp": "2026-11-20T05:53:57.218Z",
+    "Value": 10.2346
+  },
+  {
+    "Quality": 2147811328,   # uncertren
+    "Timestamp": "2026-11-20T06:07:11.949Z"
+  },
+  {
+    "Quality": 2147811328,
+    "Timestamp": "2026-11-20T06:09:59.811Z"
+  },
+   {
+    "Quality": 2150891520   # ????
+  }
+]
+
 
